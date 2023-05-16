@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Daily Schmooze</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="storys.html">Our Story</a></li>
+				<!-- <li><a href="library.html">Library</a></li> -->
+				<li><a href="partnerships.html">Partnerships</a></li>
+				<!-- <li><a href="resources.html">Educational Resources</a></li> -->
+				<!-- <li><a href="expereince.html">Expereince</a></li> -->
+				<!-- <li><a href="educational.html">Educational</a></li> -->
+				<!-- <li><a href="facts.html">Facts</a></li> -->
+			</ul>
+			<a href="#"><img id="logo" src="images/DSicon.png"></a>
+		</nav>
+	</header>
+	<style>
+		* {box-sizing: border-box}
+		body {font-family: Verdana, sans-serif; margin:0}
+		.mySlides {display: none}
+		img {vertical-align: middle;}
+		
+		/* Slideshow container */
+		.slideshow-container {
+		  max-width: 2000px;
+		  position: relative;
+		  margin: auto;
+		}
+		
+		/* Next & previous buttons */
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -22px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 18px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		}
+		
+		/* Position the "next button" to the right */
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+		
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+		  background-color: rgba(0,0,0,0.8);
+		}
+		
+		/* Caption text */
+		.text {
+		  color: #f2f2f2;
+		  font-size: 15px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  bottom: 8px;
+		  width: 100%;
+		  text-align: center;
+		}
+		
+		/* Number text (1/3 etc) */
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 12px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+		
+		/* The dots/bullets/indicators */
+		.dot {
+		  cursor: pointer;
+		  height: 15px;
+		  width: 15px;
+		  margin: 0 2px;
+		  background-color: #bbb;
+		  border-radius: 50%;
+		  display: inline-block;
+		  transition: background-color 0.6s ease;
+		}
+		
+		.active, .dot:hover {
+		  background-color: #717171;
+		}
+		
+		/* Fading animation */
+		.fade {
+		  animation-name: fade;
+		  animation-duration: 1.5s;
+		}
+		
+		@keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+		
+		/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+		  .prev, .next,.text {font-size: 11px}
+		}
+		</style>
+		</head>
+		<body>
+		
+		<div class="slideshow-container">
+		
+		<div class="mySlides fade">
+		  <!-- <div class="numbertext">1 / 6</div> -->
+		  <img src="images/Antisemitism Awareness Day/1bigger.png" style="width:100%;">
+		  <!-- <div class="text">Caption Text</div> -->
+		</div>
+		
+		<div class="mySlides fade">
+		  <!-- <div class="numbertext">2 / 6</div> -->
+		  <img src="images/Antisemitism Awareness Day 2/1bigger.png" style="width:100%;">
+		  <!-- <div class="text">Caption Two</div> -->
+		</div>
+		
+		<div class="mySlides fade">
+		  <!-- <div class="numbertext">3 / 6</div> -->
+		  <img src="images/Antisemitism Awareness Day 2/2bigger.png" style="width:100%;">
+		  <!-- <div class="text">Caption Three</div> -->
+		</div>
+		
+		<div class="mySlides fade">
+			<!-- <div class="numbertext">4 / 6</div> -->
+			<img src="images/Antisemitism Awareness Day 2/3bigger.png" style="width:100%;">
+			<!-- <div class="text">Caption Three</div> -->
+		  </div>
+
+		  <div class="mySlides fade">
+			<!-- <div class="numbertext">5 / 6</div> -->
+			<img src="images/Antisemitism Awareness Day/1bigger.png" style="width:100%;">
+			<!-- <div class="text">Caption Three</div> -->
+		  </div>
+
+		  <div class="mySlides fade">
+			<!-- <div class="numbertext">6 / 6</div> -->
+			<img src="images/Antisemitism Awareness Day/1bigger.png" style="width:100%;">
+			<!-- <div class="text">Caption Three</div> -->
+		  </div>
+
+		<a class="prev" onclick="plusSlides(-1)">❮</a>
+		<a class="next" onclick="plusSlides(1)">❯</a>
+		
+		</div>
+		<br>
+		
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		  <span class="dot" onclick="currentSlide(4)"></span> 
+		  <span class="dot" onclick="currentSlide(5)"></span> 
+		  <span class="dot" onclick="currentSlide(6)"></span> 
+		</div>
+		
+		<script>
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+		
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+		
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mySlides");
+		  let dots = document.getElementsByClassName("dot");
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {
+				slideIndex = 1
+			}
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 20000); // automatically call showSlides after 5 seconds
+		}
+	
+		</script>
+	<section class="hero">
+		
+		<div class="hero-text">
+			<h1>Inaugural Antisemitism Awareness Day</h1>
+			<p>This campaign was initiated and developed by students at the <a href="facts.html"style="color: blue;">Daily Schmooze</a> in response to the recent spike in antisemitism.</p>
+			<button>Quick link placeholder</button>
+		</div>
+		<div class="hero-image">
+			<img id="profile_pic" src="images/Antisemitism on College Campuses/1.png">
+		</div>
+	</section>
+		  <!-- -->
+
+	<section class="messages">
+		<h2>Our Message</h2>
+		<h4>“Antisemitism Awareness Day” on May 16 is a Day of Action fully conceived and developed by
+			college interns as part of the Olami social media internship program, meant to raise
+			awareness about antisemitism, talk about the experience of being Jewish on college
+			campuses, and push back through education and ally participation. Join us to make a positive
+			impact on the Jewish community and beyond.</h4>
+
+		<div class="message-grid">
+			<div class="message-item">
+				<img src="images/Antisemitism Awareness Day/2.png">
+				<!-- <h3>placeholder</h3> 
+				 <p>placeholder.</p> 
+				 <button>Quick link placeholder</button> -->
+			</div>
+			<div class="message-item">
+				<img src="images/Antisemitism Awareness Day/3.png">
+				<!-- <h3>placeholder</h3>
+				<p>placeholder.</p>
+				<button>Quick link placeholder</button> -->
+			</div>
+			<div class="message-item">
+				<img src="images/Antisemitism Awareness Day/4.png">
+				<!-- <h3>placeholder</h3>
+				<p>placeholder.</p>
+				<button>Quick link placeholder</button> -->
+			</div>
+		</div>
+	</section>
+	
+	<section class="support">
+		<h2>HOW YOU CAN HELP:</h2>
+		<h4>The number one best way to get involved on May 16 is by sharing social media content,
+			especially on Instagram and TikTok, with the campaign hashtag:</h4>
+		<h4>#AntisemitismAwareness</h4>
+		<h4>Starting at 9am EST, interns and partner organizations will be sharing content all day long, and
+			we’d love for you to help this campaign gain traction online that day.</h4>
+		<p>Want to help with your our mission? <a target="_blank" href="partnerships.html">Click here!</a></p>
+		<div class="support-grid">
+			<div class="support-item">
+				<img src="images/Day of Action - Allyship/1.png">
+				 <!-- <h3>Support</h3> 
+				<p>Reach out to us.</p> -->
+			</div>
+			<div class="support-item">
+				<img src="images/Day of Action - Allyship/2.png">
+				<!-- <h3>placeholder</h3>
+				<p>placeholder.</p> -->
+			</div>
+			<div class="support-item">
+				<img src="images/Day of Action - Allyship/2.png">
+                </section>
+            </main>
+            
+		</div>
+		<section class="messages">
+			<h2>WHO IS OLAMI, AND WHAT IS @DAILYSCHMOOZE:</h2>
+			<p>Olami is a global Jewish organization that is committed to creating a vibrant, committed, and
+				inspired Jewish future. We believe that education and engagement are the keys to creating a
+				strong Jewish identity and countering antisemitism. Our goal is to empower Jewish
+				communities around the world to become leaders in their fields and to inspire others to do
+				the same.</p>
+			<p>The goal of the social media internship program is to provide the next generation of Jewish
+				leaders with the skills to become online advocates. Olami provides a unique opportunity for
+				college students to gain practical social media skills through hands-on training while
+				contributing to the fight against antisemitism, working closely with staff members to develop
+				strategies and content that engage with audiences and inspire them to take action. The
+				@DailySchmooze social media accounts on Instagram and TikTok were fully conceptualized
+				and developed by our social media interns, who also provide the content which showcases
+				their Jewish heritage and everyday lived experience.</p>
+		</section>
+
+        <hr>
+        <div>
+		<div class="footer-bottom">
+			<p>&copy; 2023 Daily Schmooze</p>
+		</div>
+	</footer>
+	<div class="footer-socials">
+        <a href="images/privacy.jpg" target="_blank" class="links">Privacy Policy</a> 
+        <hr>
+        <div>
+          <p>Follow us</p>
+          <ul>
+            <a href="https://www.tiktok.com/@DailySchmooze" target="_blank"><img src="images/TikTok.svg" alt="Tiktok Icon"></a>
+            <a href="https://www.instagram.com/DailySchmooze/" target="_blank"><img src="images/Insta.svg" alt="Instagram Icon"></a>
+          </ul>
+        </div>
+      </div>
+
+</body>
+</html>
+        
